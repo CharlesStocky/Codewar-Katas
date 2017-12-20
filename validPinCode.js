@@ -6,10 +6,9 @@ If the function is passed a valid PIN string, return true, else return false.<Pa
 
 */
 
-function validatePIN(cc){                                                                  
-  console.log(cc.match(/^\d+$/))
+function validatePIN(cc){                                                      
   if(cc.length === 4 || cc.length === 6){
-    if(!cc.match(/^\d+$/)){
+    if(!cc.match(/^\d+$/)){ //if there is anything other than digits in the str
       return false 
     }
     return true
