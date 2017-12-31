@@ -10,7 +10,7 @@ function toWeirdCase(str){
     if(i % 2 === 0 || i === 0){
       weirdStr += str[i].toUpperCase()   
     }else if(str[i].match([/[a-zA-Z]/])){
-      weirdStr.splice(i, 0, ' ')
+      weirdStr += ' '
     }else{
       weirdStr += str[i].toLowerCase() 
     }
