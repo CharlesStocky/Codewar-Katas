@@ -6,10 +6,25 @@
 function isInvalidWalk(walk){
   if(walk.length < 10){
     return false;  
+  }else if(walk.length > 10){
+    return false;  
   }
+  let tracker = 0 
   for(var i = 0; i < walk.length; i++){
-    console.log(walk[i])    
+    if(walk[i] === 'n'){
+      tracker += 1 
+    }else if(walk[i] === 's'){
+      tracker -= 1  
+    }else if(walk[i] === 'e'){
+      tracker += 2  
+    }else if(walk[i] === 'w'){
+      tracker -= 2 
+    } 
   }
+  if(tracker === 0){
+    return true;  
+  }
+  return false; 
 }
 
-isInvalidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's'])
+isInvalidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'e', 'w'])
