@@ -18,4 +18,8 @@ function pigIt(str){
   console.log(splitStr.join(' '))
 }
 
+let [blah, bleh, byah] = [1, 2, 3] 
+
+console.log(blah, bleh, byah)
+
 pigIt('Pig latin is cool')
